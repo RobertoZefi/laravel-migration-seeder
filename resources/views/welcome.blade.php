@@ -22,13 +22,13 @@
             <div class="row">
                 @foreach($trains as $train)
                 <div class="card">
-                    <p>{{$train->azienda}}</p>
-                    <p>{{$train->stazione_di_partenza}}</p>
-                    <p>{{$train->stazione_di_arrivo}}</p>
-                    <p>{{$train->orario_di_partenza}}</p>
-                    <p>{{$train->orario_di_arrivo}}</p>
-                    <p>{{$train->codice_treno}}</p>
-                    <p>{{$train->numero_carrozze}}</p>
+                    <h4>{{$train->azienda}}</h4>
+                    <p>Stazione di Partenza: {{$train->stazione_di_partenza}}</p>
+                    <p>Stazione di Arrivo: {{$train->stazione_di_arrivo}}</p>
+                    <p>Orario di Partenza: {{$train->orario_di_partenza}}</p>
+                    <p>Orario di arrivo: {{$train->orario_di_arrivo}}</p>
+                    <p>Codice Treno: {{$train->codice_treno}}</p>
+                    <p>Numero Carrozze: {{$train->numero_carrozze}}</p>
                     @if($train->in_orario === 1)
                     <p>In orario</p>
                     @else
@@ -38,6 +38,7 @@
                     @if($train->cancellato === 1)
                     <p>Treno cancellato</p>
                     @endif
+
                 </div>
                 @endforeach
             </div>
