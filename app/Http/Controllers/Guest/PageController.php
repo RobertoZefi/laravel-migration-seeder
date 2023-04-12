@@ -11,9 +11,9 @@ class PageController extends Controller
 {
     public function index(){
         $currentTime = Carbon::now();
-        echo $currentTime->toDateString();
+        //echo $currentTime->toDateString();
 
-        $trains = Train::where('orario_di_partenza', $currentTime)->get();
+        $trains = Train::whereDate('orario_di_partenza', $currentTime)->get();
 
         $data = [
             'trains' => $trains
